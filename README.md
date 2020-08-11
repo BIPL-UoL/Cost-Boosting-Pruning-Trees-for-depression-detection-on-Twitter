@@ -6,7 +6,7 @@ The Cost-senstive boosting pruning trees code should be compiled with scikit-lea
 
 @authors: Lei Tong
 
-@Email: lt228@leicester.ac.uk (Software Developers)
+@Email: lt228@leicester.ac.uk
 
 """ 
 
