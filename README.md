@@ -52,13 +52,21 @@ Open an IPython shell::
 
  
 
- 
-
 Twitter Depression Detection Datasets 
 ======= 
 
 Tsinghua Twitter Depression Dataset: http://depressiondetection.droppages.com/
 
-CLPsych 2015 Twitter Dataset: http://www.cs.jhu.edu/ mdredze/clpsych-2015-shared-task-evaluation/
+CLPsych 2015 Twitter Dataset: http://www.cs.jhu.edu/mdredze/clpsych-2015-shared-task-evaluation/
 
- 
+Citation 
+======= 
+If you find CMBR useful in your research, please consider citing:
+	
+	>>> @article{tong2019inverse,
+  	>>> title={Inverse boosting pruning trees for depression detection on Twitter},
+  	>>> author={Tong, Lei and Zhang, Qianni and Sadka, Abdul and Li, Ling and Zhou, Huiyu and others},
+  	>>> journal={arXiv preprint arXiv:1906.00398},
+  	>>> year={2019}
+ 	>>> }
+
