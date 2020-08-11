@@ -46,9 +46,9 @@ Open an IPython shell::
 	>>> from sklearn.ensemble import CBPT 
 
 	>>> X,y = make_classification(n_samples=1000)
-	>>> CBPT = CBPT(n_estimators=100,penalty_coef=0.5,penalty_low_limit=1,learning_rate=0.5) 
-	>>> CBPT.fit(X,y) 
-	>>> CBPT.score(X,y)
+	>>> clf = CBPT(n_estimators=100,penalty_coef=0.5,penalty_low_limit=1,learning_rate=0.5) 
+	>>> clf.fit(X,y) 
+	>>> clf.score(X,y)
 
  
 
