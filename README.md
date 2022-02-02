@@ -63,10 +63,11 @@ Citation
 ======= 
 If you find CBPT useful in your research, please consider citing:
 	
-	@article{tong2019inverse,
-  	title={Inverse boosting pruning trees for depression detection on Twitter},
-  	author={Tong, Lei and Zhang, Qianni and Sadka, Abdul and Li, Ling and Zhou, Huiyu and others},
-  	journal={arXiv preprint arXiv:1906.00398},
-  	year={2019}
- 	}
+	@article{tong2022cost,
+	  title={Cost-sensitive Boosting Pruning Trees for depression detection on Twitter},
+	  author={Tong, Lei and Liu, Zhihua and Jiang, Zheheng and Zhou, Feixiang and Chen, Long and Lyu, Jialin and Zhang, Xiangrong and Zhang, Qianni and Sadka, 	     Abdul and Wang, Yinhai and others},
+	  journal={IEEE Transactions on Affective Computing},
+	  year={2022},
+	  publisher={IEEE}
+	}
 
