@@ -1,0 +1,17 @@
+base==0.0.0
+ensemble==0.0.dev1
+exceptions==0.1.0
+export==0.2.1
+externals==0.0.1
+forest==0.6
+ipython==8.14.0
+matplotlib==3.7.1
+metrics==0.3.3
+model_selection==0.0.1
+numpy==1.11.2
+pandas==2.0.3
+pydotplus==2.0.2
+cython==0.25
+scipy==0.18.1
+tqdm==4.64.1
+utils==1.0.1

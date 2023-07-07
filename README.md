@@ -10,28 +10,46 @@ The Cost-senstive boosting pruning trees code should be compiled with scikit-lea
 
 """ 
 
- 
+This method is built upon [sklearn_tree_post_prune](https://github.com/shenwanxiang/sklearn-post-prune-tree/tree/master) and scikit-learn 0.18.X.
 
 Usage 
 ======= 
 
+Step 0: Configure the Python Environment
+  ```
+  conda create -n py36 python=3.6.8
+  ```
+Step 1: Install Required Dependencies
+  ```
+  source activate py36
+  pip install -r requirements.txt
+  ```
+Step 2: Download the source code of [scikit-learn 0.18.0](https://github.com/scikit-learn/scikit-learn/tree/0.18.X) and extract it. 
+
+Step 3: Build Cython Extensions
+  ```
+  cd ./sklearn_tree_post_prune/src/
+  cython _tree_prune.pyx
+  python setup.py build
+  ```
+Step 4: Copy the following files to the directory scikit-learn-0.18.X/sklearn/tree/
+  ```
+  cp ./sklearn_tree_post_prune/src/build/lib_Completement with the system version/tree/_tree_prune.cpython-36m-darwin.so to scikit-learn-0.18.X/sklearn/tree/
+  cp ./tree_prune.py to scikit-learn-0.18.X/sklearn/tree/
+  ```
+
+Step 5: Copy the following files to the directory scikit-learn-0.18.X/sklearn/ensemble/ and add 'from . import boost\_utils' to ensemble/\_\_init\_\_.py file:
+  ```
+  cp ./boost_modify.py to scikit-learn-0.18.X/sklearn/ensemble/
+  cp ./boost_utils.py to scikit-learn-0.18.X/sklearn/ensemble/
+  ```
  
+Step 6: Change the directory to the root folder of scikit-learn-0.18.X and execute the following command:
+ ```
+  cd ./scikit-learn-0.18.X/
+  pip install -e .
+  ```
 
-Step 1: Download the source code of scikit-learn 0.18.2. 
-
- 
-
-Step 2: Copy the files _tree_prune.cpython-36m-x86_64-linux-gnu.so and tree_prune.py to the folder of scikit-learn-0.18.X/sklearn/tree/. 
-
- 
-
-Step 3: Copy the files boost_modify.py and boost_utils.py to the folder of scikit-learn-0.18.X/sklearn/ensemble/, and add 'from . import boost_utils' and 'from .boost_modify import CBPT' to ensemble/__init__.py file. 
-
- 
-
-Step 4: CD to the root folder of sckikt-learn-0.18.X and execute "pip install -e ." 
-
- 
 
 Testing 
 ======= 
@@ -58,6 +76,11 @@ Twitter Depression Detection Datasets
 Tsinghua Twitter Depression Dataset: http://depressiondetection.droppages.com/
 
 CLPsych 2015 Twitter Dataset: http://www.cs.jhu.edu/mdredze/clpsych-2015-shared-task-evaluation/
+
+
+## Acknowledgement
+Many thanks to the authors of [sklearn_tree_post_prune](https://github.com/shenwanxiang/sklearn-post-prune-tree/tree/master). 
+
 
 Citation 
 ======= 
